@@ -7,18 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9444A0A2B30D4F40039DB1D /* MostRelevantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444A092B30D4F40039DB1D /* MostRelevantView.swift */; };
+		B98667BD2B3194B8004FCD51 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667BC2B3194B8004FCD51 /* PlaceView.swift */; };
+		B98667C02B3195E8004FCD51 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667BF2B3195E8004FCD51 /* TabbedItems.swift */; };
+		B98667C22B3196DB004FCD51 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667C12B3196DB004FCD51 /* TabBar.swift */; };
+		B98667C52B319BAD004FCD51 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667C42B319BAD004FCD51 /* DiscoverView.swift */; };
+		B98667C72B319E53004FCD51 /* NewPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667C62B319E53004FCD51 /* NewPlacesView.swift */; };
+		B98667CA2B319EE9004FCD51 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667C92B319EE9004FCD51 /* Place.swift */; };
+		B98667CD2B31A5D2004FCD51 /* DetailPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667CC2B31A5D2004FCD51 /* DetailPlaceView.swift */; };
+		B994C8E42B31D78A0035002A /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = B994C8E32B31D78A0035002A /* SkeletonUI */; };
+		B994C8E72B31DEA00035002A /* SlideInModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C8E62B31DEA00035002A /* SlideInModifier.swift */; };
+		B994C8E92B31F4000035002A /* AmenityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C8E82B31F4000035002A /* AmenityModel.swift */; };
+		B994C8F42B3200590035002A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C8F32B3200590035002A /* String.swift */; };
+		B994C8F82B32068B0035002A /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C8F72B32068B0035002A /* UI.swift */; };
+		B994C8FB2B32097B0035002A /* AmenitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C8FA2B32097B0035002A /* AmenitiesView.swift */; };
+		B994C8FE2B3219780035002A /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B994C8FD2B3219780035002A /* HorizonCalendar */; };
+		B994C9012B3219A20035002A /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994C9002B3219A20035002A /* Availability.swift */; };
 		B9B45E582B309F6D00BF2312 /* BookingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B45E572B309F6D00BF2312 /* BookingAppApp.swift */; };
 		B9B45E5A2B309F6D00BF2312 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B45E592B309F6D00BF2312 /* ContentView.swift */; };
 		B9B45E5C2B309F7000BF2312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B45E5B2B309F7000BF2312 /* Assets.xcassets */; };
 		B9B45E5F2B309F7000BF2312 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B45E5E2B309F7000BF2312 /* Preview Assets.xcassets */; };
+		B9B45E672B30BF0300BF2312 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B45E662B30BF0300BF2312 /* Header.swift */; };
+		B9B45E6A2B30C11300BF2312 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B45E692B30C11300BF2312 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9444A092B30D4F40039DB1D /* MostRelevantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRelevantView.swift; sourceTree = "<group>"; };
+		B98667B82B3190E8004FCD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B98667BC2B3194B8004FCD51 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		B98667BF2B3195E8004FCD51 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
+		B98667C12B3196DB004FCD51 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B98667C42B319BAD004FCD51 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		B98667C62B319E53004FCD51 /* NewPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesView.swift; sourceTree = "<group>"; };
+		B98667C92B319EE9004FCD51 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B98667CC2B31A5D2004FCD51 /* DetailPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceView.swift; sourceTree = "<group>"; };
+		B994C8E62B31DEA00035002A /* SlideInModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInModifier.swift; sourceTree = "<group>"; };
+		B994C8E82B31F4000035002A /* AmenityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityModel.swift; sourceTree = "<group>"; };
+		B994C8F32B3200590035002A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B994C8F72B32068B0035002A /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		B994C8FA2B32097B0035002A /* AmenitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenitiesView.swift; sourceTree = "<group>"; };
+		B994C9002B3219A20035002A /* Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
 		B9B45E542B309F6D00BF2312 /* BookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B45E572B309F6D00BF2312 /* BookingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingAppApp.swift; sourceTree = "<group>"; };
 		B9B45E592B309F6D00BF2312 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9B45E5B2B309F7000BF2312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B45E5E2B309F7000BF2312 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9B45E662B30BF0300BF2312 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		B9B45E692B30C11300BF2312 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +61,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B994C8FE2B3219780035002A /* HorizonCalendar in Frameworks */,
+				B994C8E42B31D78A0035002A /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B98667BE2B3195DB004FCD51 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B98667BF2B3195E8004FCD51 /* TabbedItems.swift */,
+				B98667C12B3196DB004FCD51 /* TabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B98667C32B319BA2004FCD51 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				B9444A092B30D4F40039DB1D /* MostRelevantView.swift */,
+				B98667C42B319BAD004FCD51 /* DiscoverView.swift */,
+				B98667C62B319E53004FCD51 /* NewPlacesView.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		B98667C82B319EE0004FCD51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B98667C92B319EE9004FCD51 /* Place.swift */,
+				B994C8E82B31F4000035002A /* AmenityModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B98667CB2B31A5C4004FCD51 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				B98667BC2B3194B8004FCD51 /* PlaceView.swift */,
+				B98667CC2B31A5D2004FCD51 /* DetailPlaceView.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		B994C8E52B31DE930035002A /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				B994C8E62B31DEA00035002A /* SlideInModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		B994C8F22B32004E0035002A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B994C8F32B3200590035002A /* String.swift */,
+				B994C8F72B32068B0035002A /* UI.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B994C8F92B32096F0035002A /* Amenities */ = {
+			isa = PBXGroup;
+			children = (
+				B994C8FA2B32097B0035002A /* AmenitiesView.swift */,
+			);
+			path = Amenities;
+			sourceTree = "<group>";
+		};
+		B994C8FF2B32198A0035002A /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				B994C9002B3219A20035002A /* Availability.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
 		B9B45E4B2B309F6D00BF2312 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +158,11 @@
 		B9B45E562B309F6D00BF2312 /* BookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				B994C8F22B32004E0035002A /* Extensions */,
+				B98667B82B3190E8004FCD51 /* Info.plist */,
+				B994C8E52B31DE930035002A /* Modifier */,
+				B98667C82B319EE0004FCD51 /* Models */,
+				B9B45E652B30BEF300BF2312 /* Views */,
 				B9B45E572B309F6D00BF2312 /* BookingAppApp.swift */,
 				B9B45E592B309F6D00BF2312 /* ContentView.swift */,
 				B9B45E5B2B309F7000BF2312 /* Assets.xcassets */,
@@ -65,6 +177,28 @@
 				B9B45E5E2B309F7000BF2312 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9B45E652B30BEF300BF2312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B994C8FF2B32198A0035002A /* Booking */,
+				B994C8F92B32096F0035002A /* Amenities */,
+				B98667CB2B31A5C4004FCD51 /* Place */,
+				B98667C32B319BA2004FCD51 /* Discover */,
+				B98667BE2B3195DB004FCD51 /* TabBar */,
+				B9B45E682B30C10A00BF2312 /* User */,
+				B9B45E662B30BF0300BF2312 /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9B45E682B30C10A00BF2312 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B9B45E692B30C11300BF2312 /* Profile.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +217,10 @@
 			dependencies = (
 			);
 			name = BookingApp;
+			packageProductDependencies = (
+				B994C8E32B31D78A0035002A /* SkeletonUI */,
+				B994C8FD2B3219780035002A /* HorizonCalendar */,
+			);
 			productName = BookingApp;
 			productReference = B9B45E542B309F6D00BF2312 /* BookingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +249,10 @@
 				Base,
 			);
 			mainGroup = B9B45E4B2B309F6D00BF2312;
+			packageReferences = (
+				B994C8E22B31D78A0035002A /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+				B994C8FC2B3219780035002A /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+			);
 			productRefGroup = B9B45E552B309F6D00BF2312 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +280,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B45E5A2B309F6D00BF2312 /* ContentView.swift in Sources */,
+				B994C8F82B32068B0035002A /* UI.swift in Sources */,
+				B9444A0A2B30D4F40039DB1D /* MostRelevantView.swift in Sources */,
+				B9B45E6A2B30C11300BF2312 /* Profile.swift in Sources */,
+				B98667C22B3196DB004FCD51 /* TabBar.swift in Sources */,
+				B98667BD2B3194B8004FCD51 /* PlaceView.swift in Sources */,
+				B994C8E72B31DEA00035002A /* SlideInModifier.swift in Sources */,
+				B98667C52B319BAD004FCD51 /* DiscoverView.swift in Sources */,
+				B9B45E672B30BF0300BF2312 /* Header.swift in Sources */,
+				B98667CD2B31A5D2004FCD51 /* DetailPlaceView.swift in Sources */,
+				B98667C72B319E53004FCD51 /* NewPlacesView.swift in Sources */,
+				B98667C02B3195E8004FCD51 /* TabbedItems.swift in Sources */,
+				B98667CA2B319EE9004FCD51 /* Place.swift in Sources */,
+				B994C8F42B3200590035002A /* String.swift in Sources */,
+				B994C9012B3219A20035002A /* Availability.swift in Sources */,
+				B994C8FB2B32097B0035002A /* AmenitiesView.swift in Sources */,
 				B9B45E582B309F6D00BF2312 /* BookingAppApp.swift in Sources */,
+				B994C8E92B31F4000035002A /* AmenityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,17 +433,20 @@
 				DEVELOPMENT_TEAM = GXRBS55PR8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BookingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BookingApp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -304,17 +465,20 @@
 				DEVELOPMENT_TEAM = GXRBS55PR8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BookingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BookingApp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,6 +508,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B994C8E22B31D78A0035002A /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		B994C8FC2B3219780035002A /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B994C8E32B31D78A0035002A /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B994C8E22B31D78A0035002A /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
+		};
+		B994C8FD2B3219780035002A /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B994C8FC2B3219780035002A /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9B45E4C2B309F6D00BF2312 /* Project object */;
 }
