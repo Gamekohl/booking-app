@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B9444A0A2B30D4F40039DB1D /* MostRelevantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444A092B30D4F40039DB1D /* MostRelevantView.swift */; };
+		B95AD31E2B333EDC003330B5 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95AD31D2B333EDC003330B5 /* PlaceViewModel.swift */; };
+		B95AD3202B3342D1003330B5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95AD31F2B3342D1003330B5 /* SearchBar.swift */; };
+		B95AD3222B33474A003330B5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95AD3212B33474A003330B5 /* UINavigationController.swift */; };
+		B976AB6D2B330EA1008D31DD /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B976AB6C2B330EA1008D31DD /* Search.swift */; };
 		B98667BD2B3194B8004FCD51 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667BC2B3194B8004FCD51 /* PlaceView.swift */; };
 		B98667C02B3195E8004FCD51 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667BF2B3195E8004FCD51 /* TabbedItems.swift */; };
 		B98667C22B3196DB004FCD51 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98667C12B3196DB004FCD51 /* TabBar.swift */; };
@@ -33,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		B9444A092B30D4F40039DB1D /* MostRelevantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRelevantView.swift; sourceTree = "<group>"; };
+		B95AD31D2B333EDC003330B5 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		B95AD31F2B3342D1003330B5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B95AD3212B33474A003330B5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		B976AB6C2B330EA1008D31DD /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		B98667B82B3190E8004FCD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B98667BC2B3194B8004FCD51 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		B98667BF2B3195E8004FCD51 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
@@ -69,6 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B95AD31C2B333ECF003330B5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B95AD31D2B333EDC003330B5 /* PlaceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B976AB6B2B330E96008D31DD /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B9B45E662B30BF0300BF2312 /* Header.swift */,
+				B976AB6C2B330EA1008D31DD /* Search.swift */,
+				B95AD31F2B3342D1003330B5 /* SearchBar.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		B98667BE2B3195DB004FCD51 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +145,7 @@
 			children = (
 				B994C8F32B3200590035002A /* String.swift */,
 				B994C8F72B32068B0035002A /* UI.swift */,
+				B95AD3212B33474A003330B5 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,8 +185,9 @@
 		B9B45E562B309F6D00BF2312 /* BookingApp */ = {
 			isa = PBXGroup;
 			children = (
-				B994C8F22B32004E0035002A /* Extensions */,
+				B95AD31C2B333ECF003330B5 /* ViewModels */,
 				B98667B82B3190E8004FCD51 /* Info.plist */,
+				B994C8F22B32004E0035002A /* Extensions */,
 				B994C8E52B31DE930035002A /* Modifier */,
 				B98667C82B319EE0004FCD51 /* Models */,
 				B9B45E652B30BEF300BF2312 /* Views */,
@@ -182,13 +210,13 @@
 		B9B45E652B30BEF300BF2312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B976AB6B2B330E96008D31DD /* Header */,
 				B994C8FF2B32198A0035002A /* Booking */,
 				B994C8F92B32096F0035002A /* Amenities */,
 				B98667CB2B31A5C4004FCD51 /* Place */,
 				B98667C32B319BA2004FCD51 /* Discover */,
 				B98667BE2B3195DB004FCD51 /* TabBar */,
 				B9B45E682B30C10A00BF2312 /* User */,
-				B9B45E662B30BF0300BF2312 /* Header.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,9 +319,13 @@
 				B98667CD2B31A5D2004FCD51 /* DetailPlaceView.swift in Sources */,
 				B98667C72B319E53004FCD51 /* NewPlacesView.swift in Sources */,
 				B98667C02B3195E8004FCD51 /* TabbedItems.swift in Sources */,
+				B976AB6D2B330EA1008D31DD /* Search.swift in Sources */,
+				B95AD3222B33474A003330B5 /* UINavigationController.swift in Sources */,
 				B98667CA2B319EE9004FCD51 /* Place.swift in Sources */,
+				B95AD3202B3342D1003330B5 /* SearchBar.swift in Sources */,
 				B994C8F42B3200590035002A /* String.swift in Sources */,
 				B994C9012B3219A20035002A /* Availability.swift in Sources */,
+				B95AD31E2B333EDC003330B5 /* PlaceViewModel.swift in Sources */,
 				B994C8FB2B32097B0035002A /* AmenitiesView.swift in Sources */,
 				B9B45E582B309F6D00BF2312 /* BookingAppApp.swift in Sources */,
 				B994C8E92B31F4000035002A /* AmenityModel.swift in Sources */,

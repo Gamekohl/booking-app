@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Header: View {
     @State var showProfile = false
+    @State var showSearch = false
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -50,32 +51,7 @@ struct Header: View {
                     .foregroundStyle(.white)
                     .padding(.horizontal, 24)
                 
-                ZStack(alignment: .leading) {
-                    Rectangle()
-                        .background(.ultraThinMaterial)
-                        .clipShape(
-                            RoundedRectangle(cornerRadius: 50)
-                        )
-                        .frame(height: 60)
-                        .padding(.horizontal, 24)
-                    
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.white)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Search places")
-                                .font(.callout)
-                                .bold()
-                                .foregroundStyle(.white)
-                            Text("Date range • Number of guests")
-                                .font(.caption2)
-                                .fontWeight(.light)
-                                .foregroundStyle(.white)
-                        }
-                    }
-                    .padding(.leading, 48)
-                }
+                SearchBar()
             }
             .modifier(SlideInModifier())
             .sheet(isPresented: $showProfile, onDismiss: { showProfile = false }) {

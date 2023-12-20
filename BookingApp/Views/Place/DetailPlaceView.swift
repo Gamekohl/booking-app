@@ -102,7 +102,7 @@ struct DetailPlaceView: View {
                                     NavigationLink(destination: AmenitiesView(amenities: amenities)) {
                                         Spacer()
                                         Text("See all \(amenities.count) amenities")
-                                            .foregroundStyle(.black)
+                                            .foregroundStyle(.mainText)
                                             .bold()
                                         Spacer()
                                     }
@@ -171,7 +171,7 @@ struct DetailPlaceView: View {
                                         } label: {
                                             Spacer()
                                             Text("Contact")
-                                                .foregroundStyle(.black)
+                                                .foregroundStyle(.mainText)
                                                 .bold()
                                             Spacer()
                                         }
@@ -207,7 +207,7 @@ struct DetailPlaceView: View {
                                 
                                 NavigationLink(destination: Availability()) {
                                     Text("Book now")
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.mainText)
                                         .bold()
                                         .frame(width: 120, height: 50)
                                         .background(.white)

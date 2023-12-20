@@ -20,41 +20,43 @@ struct TabBar: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottom){
-            TabView(selection: $selectedTab) {
-                DiscoverView()
-                    .tag(0)
+        NavigationStack {
+            ZStack(alignment: .bottom){
+                TabView(selection: $selectedTab) {
+                    DiscoverView()
+                        .tag(0)
+                    
+                    MostRelevantView()
+                        .tag(1)
+                    
+                    MostRelevantView()
+                        .tag(2)
+                    
+                    MostRelevantView()
+                        .tag(3)
+                }
+                .background(.clear)
                 
-                MostRelevantView()
-                    .tag(1)
-                
-                MostRelevantView()
-                    .tag(2)
-                
-                MostRelevantView()
-                    .tag(3)
-            }
-            .background(.clear)
-            
-            Color.black.opacity(0.8)
-                .overlay {
-                    ZStack{
-                        HStack(spacing: 16) {
-                            ForEach((TabbedItems.allCases), id: \.self){ item in
-                                Button{
-                                    selectedTab = item.rawValue
-                                } label: {
-                                    CustomTabItem(imageName: item.iconName, title: item.title, isActive: (selectedTab == item.rawValue))
+                Color.black.opacity(0.8)
+                    .overlay {
+                        ZStack{
+                            HStack(spacing: 16) {
+                                ForEach((TabbedItems.allCases), id: \.self){ item in
+                                    Button{
+                                        selectedTab = item.rawValue
+                                    } label: {
+                                        CustomTabItem(imageName: item.iconName, title: item.title, isActive: (selectedTab == item.rawValue))
+                                    }
                                 }
                             }
+                            .padding(6)
                         }
-                        .padding(6)
                     }
-                }
-                .frame(height: 70)
-                .background(.ultraThinMaterial)
-                .cornerRadius(35)
-                .padding(.horizontal, 26)
+                    .frame(height: 70)
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(35)
+                    .padding(.horizontal, 26)
+            }
         }
     }
 }
