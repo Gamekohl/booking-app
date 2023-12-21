@@ -26,7 +26,7 @@ struct TabBar: View {
                     DiscoverView()
                         .tag(0)
                     
-                    MostRelevantView()
+                    Favorites()
                         .tag(1)
                     
                     MostRelevantView()

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AmenitiesView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State var amenities: [AmenityModel]
     
     var body: some View {
@@ -21,8 +23,24 @@ struct AmenitiesView: View {
                 }
             }
         }
-            .listRowInsets(.none)
-            .navigationTitle("Amenities")
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .imageScale(.small)
+                        .foregroundStyle(.black)
+                        .frame(width: 32, height: 32)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                }
+            }
+        }
+        .toolbarBackground(.hidden)
+        .listRowInsets(.none)
+        .navigationTitle("Amenities")
     }
 }
 

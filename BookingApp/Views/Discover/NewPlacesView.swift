@@ -28,32 +28,43 @@ struct NewPlacesView: View {
             }
             .padding(.vertical, -8)
         }
+        .modifier(SlideInModifier())
     }
     
     @ViewBuilder
     func Place(image: String, title: String) -> some View {
-        AsyncImage(url: URL(string: image)) { image in
-            image
-                .frame(width: 320, height: 200)
-                .aspectRatio(contentMode: .fit)
-                .overlay {
-                    ZStack(alignment: .leading) {
-                        LinearGradient(colors: [.clear, .black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
-                        
-                        VStack {
-                            Spacer()
-                            Text(title)
-                                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.white)
-                                    .padding(.horizontal, 16)
-                                    .padding(.bottom, 16)
+        AsyncImage(url: URL(string: image)) { phase in
+            if let image = phase.image {
+                image
+                    .frame(width: 320, height: 200)
+                    .aspectRatio(contentMode: .fit)
+                    .overlay {
+                        ZStack(alignment: .leading) {
+                            LinearGradient(colors: [.clear, .black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
+                            
+                            VStack {
+                                Spacer()
+                                Text(title)
+                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.white)
+                                        .padding(.horizontal, 16)
+                                        .padding(.bottom, 16)
+                                }
                             }
-                        }
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-        } placeholder: {
-            
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+            } else if phase.error != nil {
+                
+            } else {
+                Rectangle()
+                    .fill(.white)
+                    .frame(width: 320, height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                    .skeleton(
+                        with: true,
+                        size: CGSize(width: 320, height: 200), animation: .pulse(), shape: .rounded(.radius(30)))
+            }
         }
         .shadow(radius: 10)
     }

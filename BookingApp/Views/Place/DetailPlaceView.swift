@@ -12,16 +12,7 @@ struct DetailPlaceView: View {
     
     @State var place: Place
     
-    @State private var amenities: [AmenityModel] = [
-        AmenityModel(title: "Wi-Fi", image: "wifi"),
-        AmenityModel(title: "65\" HDTV", image: "tv"),
-        AmenityModel(title: "Indoor fireplace", image: "fireplace"),
-        AmenityModel(title: "Hair dryer", image: "fan"),
-        AmenityModel(title: "Washing machine", image: "washer"),
-        AmenityModel(title: "Dryer", image: "dryer"),
-        AmenityModel(title: "Refrigerator", image: "refrigerator"),
-        AmenityModel(title: "Dishwasher", image: "dishwasher"),
-    ]
+    @State private var amenities: [AmenityModel] = staticAmenities
     @State private var offset: CGFloat = .zero
     
     var body: some View {
@@ -29,19 +20,23 @@ struct DetailPlaceView: View {
             VStack {
                 ZStack(alignment: .bottom) {
                     ScrollView {
-                        AsyncImage(url: URL(string: "https://plus.unsplash.com/premium_photo-1680100256112-2e1231d9d0df?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width, height: 300)
-                                .clipShape(.rect(bottomLeadingRadius: 50, bottomTrailingRadius: 50))
-                        } placeholder: {
-                            Rectangle()
-                                .frame(height: 300)
-                                .skeleton(with: true, size: CGSize(width: UIScreen.main.bounds.size.width, height: 300), animation: .pulse(),
-                                          shape: .rounded(.radius(50, style: .circular)))
-                                .clipShape(.rect(bottomLeadingRadius: 50, bottomTrailingRadius: 50))
-                                .ignoresSafeArea()
+                        AsyncImage(url: URL(string: place.image)) { phase in
+                            if let image = phase.image {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: UIScreen.main.bounds.width, height: 300)
+                                    .clipShape(.rect(bottomLeadingRadius: 50, bottomTrailingRadius: 50))
+                            } else if phase.error != nil {
+                                
+                            } else {
+                                Rectangle()
+                                    .frame(height: 300)
+                                    .skeleton(with: true, size: CGSize(width: UIScreen.main.bounds.size.width, height: 300), animation: .pulse(),
+                                              shape: .rounded(.radius(50, style: .circular)))
+                                    .clipShape(.rect(bottomLeadingRadius: 50, bottomTrailingRadius: 50))
+                                    .ignoresSafeArea()
+                            }
                         }
                         
                         Spacer()
@@ -234,7 +229,7 @@ struct DetailPlaceView: View {
                             .overlay {
                                 Image(systemName: "xmark")
                                     .imageScale(.small)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.mainText)
                             }
                             .frame(width: 32, height: 32)
                             .background(offset > 200 ? .thinMaterial : .ultraThinMaterial)
@@ -248,7 +243,7 @@ struct DetailPlaceView: View {
                             .overlay {
                                 Image(systemName: "heart")
                                     .imageScale(.small)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.mainText)
                             }
                             .frame(width: 32, height: 32)
                             .background(offset > 200 ? .thinMaterial : .ultraThinMaterial)
@@ -263,7 +258,7 @@ struct DetailPlaceView: View {
                             .overlay {
                                 Image(systemName: "square.and.arrow.up")
                                     .imageScale(.small)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.mainText)
                             }
                             .frame(width: 32, height: 32)
                             .background(offset > 200 ? .thinMaterial : .ultraThinMaterial)

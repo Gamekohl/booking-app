@@ -10,39 +10,43 @@ import SkeletonUI
 
 struct PlaceView: View {
     @State var place: Place
+    @State var overrideMaxWidth = false
     @State private var expandPlace = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: place.image)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 320, height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .overlay(alignment: .topTrailing) {
-                        Button {
-                            print("favorite")
-                        } label: {
-                            Image(systemName: "heart")
-                                .frame(width: 32, height: 32)
-                                .foregroundStyle(.mainText)
-                                .background(.white)
-                                .clipShape(Circle())
-                                .offset(x: -16, y: 16)
+            AsyncImage(url: URL(string: place.image)) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(minWidth: 320, minHeight: 200)
+                        .frame(maxWidth: !overrideMaxWidth ? 320 : UIScreen.main.bounds.size
+                            .width, maxHeight: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .overlay(alignment: .topTrailing) {
+                            Button {
+                                print("favorite")
+                            } label: {
+                                Image(systemName: "heart")
+                                    .frame(width: 32, height: 32)
+                                    .foregroundStyle(.mainText)
+                                    .background(.white)
+                                    .clipShape(Circle())
+                                    .offset(x: -16, y: 16)
+                            }
                         }
-                    }
-            } placeholder: {
-                Rectangle()
-                    .fill(.white)
-                    .frame(width: 320, height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .skeleton(
-                        with: true,
-                        size: CGSize(width: 320, height: 200), animation: .pulse(), shape: .rounded(.radius(30)))
-            }
-            .onTapGesture {
-                expandPlace.toggle()
+                } else if phase.error != nil {
+                    
+                } else {
+                    Rectangle()
+                        .fill(.white)
+                        .frame(width: 320, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                        .skeleton(
+                            with: true,
+                            size: CGSize(width: 320, height: 200), animation: .pulse(), shape: .rounded(.radius(30)))
+                }
             }
             
             VStack(alignment: .leading) {
@@ -72,13 +76,17 @@ struct PlaceView: View {
                         .bold()
                 }
             }
-            .padding(.bottom, 16)
-            .padding(.top, 8)
             .fullScreenCover(isPresented: $expandPlace) {
                 DetailPlaceView(place: place)
             }
+            .padding(.bottom, 16)
+            .padding(.top, 8)
         }
         .shadow(radius: 10)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            expandPlace.toggle()
+        }
     }
 }
 

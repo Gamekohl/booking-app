@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B929C4DE2B3430110084D450 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B929C4DD2B3430110084D450 /* Favorites.swift */; };
 		B9444A0A2B30D4F40039DB1D /* MostRelevantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9444A092B30D4F40039DB1D /* MostRelevantView.swift */; };
 		B95AD31E2B333EDC003330B5 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95AD31D2B333EDC003330B5 /* PlaceViewModel.swift */; };
 		B95AD3202B3342D1003330B5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95AD31F2B3342D1003330B5 /* SearchBar.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B929C4DD2B3430110084D450 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		B9444A092B30D4F40039DB1D /* MostRelevantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRelevantView.swift; sourceTree = "<group>"; };
 		B95AD31D2B333EDC003330B5 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		B95AD31F2B3342D1003330B5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B929C4DC2B3430050084D450 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				B929C4DD2B3430110084D450 /* Favorites.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		B95AD31C2B333ECF003330B5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		B98667CB2B31A5C4004FCD51 /* Place */ = {
 			isa = PBXGroup;
 			children = (
+				B994C8FF2B32198A0035002A /* Booking */,
 				B98667BC2B3194B8004FCD51 /* PlaceView.swift */,
 				B98667CC2B31A5D2004FCD51 /* DetailPlaceView.swift */,
 			);
@@ -210,8 +221,8 @@
 		B9B45E652B30BEF300BF2312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B929C4DC2B3430050084D450 /* Favorites */,
 				B976AB6B2B330E96008D31DD /* Header */,
-				B994C8FF2B32198A0035002A /* Booking */,
 				B994C8F92B32096F0035002A /* Amenities */,
 				B98667CB2B31A5C4004FCD51 /* Place */,
 				B98667C32B319BA2004FCD51 /* Discover */,
@@ -316,6 +327,7 @@
 				B994C8E72B31DEA00035002A /* SlideInModifier.swift in Sources */,
 				B98667C52B319BAD004FCD51 /* DiscoverView.swift in Sources */,
 				B9B45E672B30BF0300BF2312 /* Header.swift in Sources */,
+				B929C4DE2B3430110084D450 /* Favorites.swift in Sources */,
 				B98667CD2B31A5D2004FCD51 /* DetailPlaceView.swift in Sources */,
 				B98667C72B319E53004FCD51 /* NewPlacesView.swift in Sources */,
 				B98667C02B3195E8004FCD51 /* TabbedItems.swift in Sources */,
